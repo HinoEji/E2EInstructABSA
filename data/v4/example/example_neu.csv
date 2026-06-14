@@ -1,0 +1,13 @@
+text,aspects,aspect_sentiment_pairs,aspect_opinion_pairs,triplets
+"Sữa nhận đuoc rồi nhưng vẫn chưa nhận đuoc quà, quà tặng lẽ ra nên đi kèm với sản phâme thì hay hơn",['quà tặng'],"[('quà tặng', 'NEU')]","[('quà tặng', 'lẽ ra nên đi kèm với sản phâme thì hay hơn')]","[('quà tặng', 'lẽ ra nên đi kèm với sản phâme thì hay hơn', 'NEU')]"
+chào shop mk cao 1m78 nặng 60kg thì nên chọn sai nào ạ,['sai'],"[('sai', 'NEU')]","[('sai', '<IO>')]","[('sai', '<IO>', 'NEU')]"
+Tốt tôi rất hài lòng nhưng còn bài chỗ tôi ko thik lắm,['bài chỗ'],"[('bài chỗ', 'NEU')]","[('bài chỗ', 'ko thik lắm')]","[('bài chỗ', 'ko thik lắm', 'NEU')]"
+phải dùng một thời gian mới có đánh giá được độ bền ... tiền nào của nấy,['<IA>'],"[('<IA>', 'NEU')]","[('<IA>', 'tiền nào của nấy')]","[('<IA>', 'tiền nào của nấy', 'NEU')]"
+Dùng được trong tầm giá. Nếu có điều kiện thì mua quạt xịn hơn chạy cho êm.,['tầm giá.'],"[('tầm giá.', 'NEU')]","[('tầm giá.', 'Dùng được')]","[('tầm giá.', 'Dùng được', 'NEU')]"
+"Mình mua 2 cái, phí cồng kềnh 26k, ahihi Hàng như hình","['phí cồng kềnh', 'Hàng']","[('phí cồng kềnh', 'NEU'), ('Hàng', 'NEU')]","[('phí cồng kềnh', '26k,'), ('Hàng', 'như hình')]","[('phí cồng kềnh', '26k,', 'NEU'), ('Hàng', 'như hình', 'NEU')]"
+chất vải cũng bình thường thôi so với giá tiền như vậy.,"['chất vải', 'giá tiền']","[('chất vải', 'NEU'), ('giá tiền', 'NEU')]","[('chất vải', 'bình thường thôi so với'), ('giá tiền', 'bình thường thôi so với')]","[('chất vải', 'bình thường thôi so với', 'NEU'), ('giá tiền', 'bình thường thôi so với', 'NEU')]"
+Nên mua kèm sách Ảnh hưởng nho giáo của cụ Phan Khôi nữa để có cái nhìn thêm về Nho giáo,['<IA>'],"[('<IA>', 'NEU')]","[('<IA>', 'Nên mua')]","[('<IA>', 'Nên mua', 'NEU')]"
+uống cũng tạm dc viết cho đủ 50 từ mà có vẻ dài quá,['uống'],"[('uống', 'NEU')]","[('uống', 'tạm dc')]","[('uống', 'tạm dc', 'NEU')]"
+Mình đặt mua cáp sạc iphone mà nhận được cáp sạc úb. Không biết phải đổi hàng ntn?,['đổi hàng'],"[('đổi hàng', 'NEU')]","[('đổi hàng', '<IO>')]","[('đổi hàng', '<IO>', 'NEU')]"
+"Sản phẩm hiện vẫn chưa sử dụng, tiki vui lòng liên hệ đổi lại đúng sp của Hoàng Long Store bán. Cảm ơn.",['liên hệ đổi lại'],"[('liên hệ đổi lại', 'NEU')]","[('liên hệ đổi lại', '<IO>')]","[('liên hệ đổi lại', '<IO>', 'NEU')]"
+sản phẩm đây là mặt trống hay nguyên cái trống zậy shop,"['sản phẩm', 'mặt trống', 'nguyên cái trống']","[('sản phẩm', 'NEU'), ('mặt trống', 'NEU'), ('nguyên cái trống', 'NEU')]","[('sản phẩm', '<IO>'), ('mặt trống', '<IO>'), ('nguyên cái trống', '<IO>')]","[('sản phẩm', '<IO>', 'NEU'), ('mặt trống', '<IO>', 'NEU'), ('nguyên cái trống', '<IO>', 'NEU')]"
