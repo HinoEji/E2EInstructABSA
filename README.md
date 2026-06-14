@@ -4,6 +4,15 @@
 
 ```
 
+```{bash}
+
+  python predict.py \
+    --model-path result/best_models/eval_aoste_f1 \
+    --dataset-path data/span/test.csv \
+    --config config/config.json \
+    --output-dir prediction_result
+```
+
 # Result folder structure
 ```
 result
