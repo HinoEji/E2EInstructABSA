@@ -1,0 +1,13 @@
+text,aspects,aspect_sentiment_pairs,aspect_opinion_pairs,triplets
+Tạm chấp nhận trong tầm giá,['giá'],"[('giá', 'NEU')]","[('giá', 'Tạm chấp nhận')]","[('giá', 'Tạm chấp nhận', 'NEU')]"
+BCS mỏng quá sức ak.,['BCS'],"[('BCS', 'NEU')]","[('BCS', 'mỏng quá sức ak.')]","[('BCS', 'mỏng quá sức ak.', 'NEU')]"
+Không biết phải đổi hàng ntn?,['đổi hàng'],"[('đổi hàng', 'NEU')]","[('đổi hàng', '<IO>')]","[('đổi hàng', '<IO>', 'NEU')]"
+Về chất lượng chưa rõ,['chất lượng'],"[('chất lượng', 'NEU')]","[('chất lượng', 'chưa rõ')]","[('chất lượng', 'chưa rõ', 'NEU')]"
+"Dạng tản văn,","['Dạng tản văn,']","[('Dạng tản văn,', 'NEU')]","[('Dạng tản văn,', '<IO>')]","[('Dạng tản văn,', '<IO>', 'NEU')]"
+mới sd nên chưa biết coing dụng ra sao,['coing dụng'],"[('coing dụng', 'NEU')]","[('coing dụng', 'chưa biết coing dụng ra sao')]","[('coing dụng', 'chưa biết coing dụng ra sao', 'NEU')]"
+chất lượng thì dùng lâu mới đánh giá đươc,['chất lượng'],"[('chất lượng', 'NEU')]","[('chất lượng', 'dùng lâu mới đánh giá đươc')]","[('chất lượng', 'dùng lâu mới đánh giá đươc', 'NEU')]"
+đóng gói,['đóng gói'],"[('đóng gói', 'NEU')]","[('đóng gói', '<IO>')]","[('đóng gói', '<IO>', 'NEU')]"
+chưa sd nên không biết có bền không.,['bền'],"[('bền', 'NEU')]","[('bền', 'không biết')]","[('bền', 'không biết', 'NEU')]"
+Mới nhận hàng,['nhận hàng'],"[('nhận hàng', 'NEU')]","[('nhận hàng', '<IO>')]","[('nhận hàng', '<IO>', 'NEU')]"
+Chưa biết tác dụng có hiệu quả hay không,['tác dụng'],"[('tác dụng', 'NEU')]","[('tác dụng', '<IO>')]","[('tác dụng', '<IO>', 'NEU')]"
+sản phẩm béo.,['sản phẩm'],"[('sản phẩm', 'NEU')]","[('sản phẩm', 'béo.')]","[('sản phẩm', 'béo.', 'NEU')]"

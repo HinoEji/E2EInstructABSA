@@ -447,59 +447,58 @@ class InstructionSpanHandler(BaseInstructionHandler):
     def load_instruction_1(self):
         ############################### ATE ###############################
         self.ate["example"] = """Ví dụ 1:
-input: Giòn,
-output: [ate] <IA>
+input: chất lượng ok.
+output: [ate] chất lượng
 Ví dụ 2:
-input: Sp có kèm bàn chải riêng với kệ treo sp lên phơi sau khi rửa rất thiết thực.
-output: [ate] bàn chải riêng ## kệ treo
+input: Đó giờ chỉ tin dùng hạt chia của shop realfood. Hài lòng và luôn mua lại của shop này.
+output: [ate] shop realfood. ## shop này.
 """
         self.ate["instruction"] = self.ate["definition"] + self.ate["example"] + self.ate["delim_instruct"]
 
         ##################### atsc #####################
         self.atsc["example"] = """Ví dụ 1:
-input: size chuẩn. ## Aspect: size
+input: SP tốt rất ưng ý ## Aspect: SP
 output: [atsc] POS
 Ví dụ 2:
-input: Sữa ngon ## Aspect: Sữa
+input: nước sơn rất lì. ## Aspect: nước sơn
 output: [atsc] POS
 """
         self.atsc["instruction"] = self.atsc["definition"] + self.atsc["example"] + self.atsc["delim_instruct"]
         ##################### aspe #####################
         self.aspe["example"] = """Ví dụ 1:
-input: Áo có 2 mặt sử dụng,
-output: [aspe] Áo $ POS
+input: đóng mở dễ dàng
+output: [aspe] đóng mở $ POS
 Ví dụ 2:
-input: rất cảm ơn ông Shipper không quãng thời gian khó khăn để cố gắng vận chuyển hàng cho em,
-output: [aspe] Shipper $ POS ## Shipper $ POS
+input: Mua đợt sale giá ngon,
+output: [aspe] giá $ POS
 """
         self.aspe["instruction"] = self.aspe["definition"] + self.aspe["example"] + self.aspe["delim_instruct"]
         ##################### aooe #####################
-        self.aooe["example"] = """
-        Ví dụ 1:
-input: Màu có thể dùng cho nhiều dịp. ## Aspect: Màu
-output: [aooe] có thể dùng cho nhiều dịp.
+        self.aooe["example"] = """Ví dụ 1:
+input: dùng ok ## Aspect: dùng
+output: [aooe] ok
 Ví dụ 2:
-input: dễ cầm ## Aspect: cầm
-output: [aooe] dễ
+input: Giấy cứng ,chất lượng. ## Aspect: Giấy
+output: [aooe] cứng ,chất lượng.
 """
         self.aooe["instruction"] = self.aooe["definition"] + self.aooe["example"] + self.aooe["delim_instruct"]
 
         ##################### aope #####################
         self.aope["example"] = """Ví dụ 1:
-input: Mình không bao giờ thất vọng về Thầy
-output: [aope] Thầy $ không bao giờ thất vọng
+input: rất chắc chắn.
+output: [aope] <IA> $ rất chắc chắn.
 Ví dụ 2:
-input: Quyển sách rất hấp dấn, thu hút người đọc
-output: [aope] Quyển sách $ hấp dấn, thu hút người đọc
+input: Tốt
+output: [aope] <IA> $ Tốt
 """
         self.aope["instruction"] = self.aope["definition"] + self.aope["example"] + self.aope["delim_instruct"]
         ##################### aoste #####################
         self.aoste["example"]= """Ví dụ 1:
-input: Không đau rát tay.
-output: [aoste] tay. $ Không đau rát $ POS
+input: đóng gói cẩn thận.
+output: [aoste] đóng gói $ cẩn thận. $ POS
 Ví dụ 2:
-input: hàng ngon
-output: [aoste] hàng $ ngon $ POS
+input: dễ lắp ráp
+output: [aoste] lắp ráp $ dễ $ POS
 """
         self.aoste["instruction"] = self.aoste["definition"] + self.aoste["example"] + self.aoste["delim_instruct"]
 
@@ -507,131 +506,130 @@ output: [aoste] hàng $ ngon $ POS
     def load_instruction_2(self):
         ############################### ATE ###############################
         self.ate["example"] = """Ví dụ 1:
-input: Giòn,
-output: [ate] <IA>
+input: chất lượng ok.
+output: [ate] chất lượng
 Ví dụ 2:
-input: Sp có kèm bàn chải riêng với kệ treo sp lên phơi sau khi rửa rất thiết thực.
-output: [ate] bàn chải riêng ## kệ treo
+input: Đó giờ chỉ tin dùng hạt chia của shop realfood. Hài lòng và luôn mua lại của shop này.
+output: [ate] shop realfood. ## shop này.
 Ví dụ 3:
-input: giao hàng kiểu gì mà gối ướt hết.
-output: [ate] gối ## giao hàng
+input: sau khi thoa thấm ko nhanh,
+output: [ate] thoa
 Ví dụ 4:
-input: quai đi đường quai
-output: [ate] quai
+input: may ẩu bị bun chỉ ù chưa xử dụng
+output: [ate] may ## chỉ
 Ví dụ 5:
-input: gọi hãng bảo hành.
-output: [ate] bảo hành.
+input: BCS mỏng quá sức ak.
+output: [ate] BCS
 Ví dụ 6:
-input: Sản phẩm như hình.
-output: [ate] Sản phẩm
+input: Tạm chấp nhận trong tầm giá
+output: [ate] giá
 """
         self.ate["instruction"] = self.ate["definition"] + self.ate["example"] + self.ate["delim_instruct"]
 
         ##################### atsc #####################
         self.atsc["example"] = """Ví dụ 1:
-input: size chuẩn. ## Aspect: size
+input: SP tốt rất ưng ý ## Aspect: SP
 output: [atsc] POS
 Ví dụ 2:
-input: Sữa ngon ## Aspect: Sữa
+input: nước sơn rất lì. ## Aspect: nước sơn
 output: [atsc] POS
 Ví dụ 3:
-input: ko lặp lại ## Aspect: lặp lại
+input: ghi 2m giao 1m ## Aspect: giao
 output: [atsc] NEG
 Ví dụ 4:
-input: Thiết kế khay chưa hợp lý, không để được nhiều bát. ## Aspect: Thiết kế khay
+input: màn hình màu k được tươi tắn ## Aspect: màn hình màu
 output: [atsc] NEG
 Ví dụ 5:
-input: Mong Tiki nhanh chóng tìm ra giải pháp cho vấn đề này. ## Aspect: Tiki
+input: Mới nhận hàng ## Aspect: nhận hàng
 output: [atsc] NEU
 Ví dụ 6:
-input: có đổi khoá giống hình nhu shop chụp mẫu không ## Aspect: đổi khoá
+input: mới sd nên chưa biết coing dụng ra sao ## Aspect: coing dụng
 output: [atsc] NEU
 """
         self.atsc["instruction"] = self.atsc["definition"] + self.atsc["example"] + self.atsc["delim_instruct"]
         ##################### aspe #####################
         self.aspe["example"] = """Ví dụ 1:
-input: Áo có 2 mặt sử dụng,
-output: [aspe] Áo $ POS
+input: đóng mở dễ dàng
+output: [aspe] đóng mở $ POS
 Ví dụ 2:
-input: rất cảm ơn ông Shipper không quãng thời gian khó khăn để cố gắng vận chuyển hàng cho em,
-output: [aspe] Shipper $ POS ## Shipper $ POS
+input: Mua đợt sale giá ngon,
+output: [aspe] giá $ POS
 Ví dụ 3:
-input: bookcare thì vẫn bị trừ,
-output: [aspe] bookcare $ NEG
+input: Hàng kém chất lượng.
+output: [aspe] Hàng $ NEG
 Ví dụ 4:
-input: vận chuyển có hơi lâu thôi,
-output: [aspe] vận chuyển $ NEG
+input: dây sạc thì dơ
+output: [aspe] dây sạc $ NEG
 Ví dụ 5:
-input: thời gian dùng có bền không
-output: [aspe] bền $ NEU
+input: Về chất lượng chưa rõ
+output: [aspe] chất lượng $ NEU
 Ví dụ 6:
-input: mình chưa mặc thử. nên k biết hợp ko.
-output: [aspe] mặc $ NEU
+input: sản phẩm béo.
+output: [aspe] sản phẩm $ NEU
 """
         self.aspe["instruction"] = self.aspe["definition"] + self.aspe["example"] + self.aspe["delim_instruct"]
         ##################### aooe #####################
-        self.aooe["example"] = """
-        Ví dụ 1:
-input: Màu có thể dùng cho nhiều dịp. ## Aspect: Màu
-output: [aooe] có thể dùng cho nhiều dịp.
+        self.aooe["example"] = """Ví dụ 1:
+input: dùng ok ## Aspect: dùng
+output: [aooe] ok
 Ví dụ 2:
-input: dễ cầm ## Aspect: cầm
-output: [aooe] dễ
+input: Giấy cứng ,chất lượng. ## Aspect: Giấy
+output: [aooe] cứng ,chất lượng.
 Ví dụ 3:
-input: Sản phẩm lúc giao bị cắt bịch, ## Aspect: bịch,
-output: [aooe] bị cắt
+input: gắn lại không chặt được ## Aspect: gắn lại
+output: [aooe] không chặt được
 Ví dụ 4:
-input: các gói mỳ vẫn hơi vỡ 1 chút, ## Aspect: các gói mỳ
-output: [aooe] hơi vỡ 1 chút,
+input: ko thích hợp nghe nhạc nhẹ ## Aspect: nghe nhạc nhẹ
+output: [aooe] ko thích hợp
 Ví dụ 5:
-input: Về giao hàng: shop nói giao hàng màu ngẫu nhiên nhưng giao 2/3 cái là màu đỏ. ## Aspect: giao hàng màu
-output: [aooe] no_opinion
+input: Không biết phải đổi hàng ntn? ## Aspect: đổi hàng
+output: [aooe] <IO>
 Ví dụ 6:
-input: Hàng mua chủ yếu làm phụ kiện đồ chơi cho trẻ con, ## Aspect: Hàng
-output: [aooe] làm phụ kiện đồ chơi cho trẻ con,
+input: Dạng tản văn, ## Aspect: Dạng tản văn,
+output: [aooe] <IO>
 """
         self.aooe["instruction"] = self.aooe["definition"] + self.aooe["example"] + self.aooe["delim_instruct"]
 
         ##################### aope #####################
         self.aope["example"] = """Ví dụ 1:
-input: Mình không bao giờ thất vọng về Thầy
-output: [aope] Thầy $ không bao giờ thất vọng
+input: rất chắc chắn.
+output: [aope] <IA> $ rất chắc chắn.
 Ví dụ 2:
-input: Quyển sách rất hấp dấn, thu hút người đọc
-output: [aope] Quyển sách $ hấp dấn, thu hút người đọc
+input: Tốt
+output: [aope] <IA> $ Tốt
 Ví dụ 3:
-input: do vận chuyển nên bị gập lại
-output: [aope] vận chuyển $ bị gập lại
+input: giá khá cao
+output: [aope] giá $ khá cao
 Ví dụ 4:
-input: độ bền quá kém,
-output: [aope] độ bền $ quá kém,
+input: 2 cái 2 xương rồng mình đặt k có chữ
+output: [aope] 2 cái 2 xương rồng $ k có chữ
 Ví dụ 5:
-input: độ bền thì thời gian sẽ trả lới:))
-output: [aope] độ bền $ thời gian sẽ trả lới:))
+input: chưa sd nên không biết có bền không.
+output: [aope] bền $ không biết
 Ví dụ 6:
-input: Để xem dùng có đúng với số trang quảng cáo không.
-output: [aope] dùng $ no_opinion
+input: chất lượng thì dùng lâu mới đánh giá đươc
+output: [aope] chất lượng $ dùng lâu mới đánh giá đươc
 """
         self.aope["instruction"] = self.aope["definition"] + self.aope["example"] + self.aope["delim_instruct"]
         ##################### aoste #####################
         self.aoste["example"]= """Ví dụ 1:
-input: Không đau rát tay.
-output: [aoste] tay. $ Không đau rát $ POS
+input: đóng gói cẩn thận.
+output: [aoste] đóng gói $ cẩn thận. $ POS
 Ví dụ 2:
-input: hàng ngon
-output: [aoste] hàng $ ngon $ POS
+input: dễ lắp ráp
+output: [aoste] lắp ráp $ dễ $ POS
 Ví dụ 3:
-input: nó thật sự đã tạo nên 1 bộ sách không hoàn mĩ
-output: [aoste] bộ sách $ không hoàn mĩ $ NEG
+input: lắp ống vào vòi không kĩ làm rỉ nước.
+output: [aoste] lắp ống vào vòi $ không kĩ làm rỉ nước. $ NEG
 Ví dụ 4:
-input: Máy hoạt động hơi lớn
-output: [aoste] hoạt động $ hơi lớn $ NEG
+input: hơi khó sử dụng.
+output: [aoste] sử dụng. $ hơi khó $ NEG
 Ví dụ 5:
-input: chất lượng thì về lâu mới biết
-output: [aoste] chất lượng $ về lâu mới biết $ NEU
+input: Chưa biết tác dụng có hiệu quả hay không
+output: [aoste] tác dụng $ <IO> $ NEU
 Ví dụ 6:
-input: Đã dùng dầu gội - xả đc 2 tuần,
-output: [aoste] dùng $ no_opinion $ NEU
+input: đóng gói
+output: [aoste] đóng gói $ <IO> $ NEU
 """
         self.aoste["instruction"] = self.aoste["definition"] + self.aoste["example"] + self.aoste["delim_instruct"]
 

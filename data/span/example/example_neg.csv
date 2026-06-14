@@ -1,0 +1,13 @@
+text,aspects,aspect_sentiment_pairs,aspect_opinion_pairs,triplets
+lắp ống vào vòi không kĩ làm rỉ nước.,['lắp ống vào vòi'],"[('lắp ống vào vòi', 'NEG')]","[('lắp ống vào vòi', 'không kĩ làm rỉ nước.')]","[('lắp ống vào vòi', 'không kĩ làm rỉ nước.', 'NEG')]"
+gắn lại không chặt được,['gắn lại'],"[('gắn lại', 'NEG')]","[('gắn lại', 'không chặt được')]","[('gắn lại', 'không chặt được', 'NEG')]"
+dây sạc thì dơ,['dây sạc'],"[('dây sạc', 'NEG')]","[('dây sạc', 'dơ')]","[('dây sạc', 'dơ', 'NEG')]"
+Hàng kém chất lượng.,['Hàng'],"[('Hàng', 'NEG')]","[('Hàng', 'kém chất lượng.')]","[('Hàng', 'kém chất lượng.', 'NEG')]"
+may ẩu bị bun chỉ ù chưa xử dụng,"['may', 'chỉ']","[('may', 'NEG'), ('chỉ', 'NEG')]","[('may', 'ẩu bị bun'), ('chỉ', 'ẩu bị bun')]","[('may', 'ẩu bị bun', 'NEG'), ('chỉ', 'ẩu bị bun', 'NEG')]"
+hơi khó sử dụng.,['sử dụng.'],"[('sử dụng.', 'NEG')]","[('sử dụng.', 'hơi khó')]","[('sử dụng.', 'hơi khó', 'NEG')]"
+"sau khi thoa thấm ko nhanh,",['thoa'],"[('thoa', 'NEG')]","[('thoa', 'thấm ko nhanh,')]","[('thoa', 'thấm ko nhanh,', 'NEG')]"
+ko thích hợp nghe nhạc nhẹ,['nghe nhạc nhẹ'],"[('nghe nhạc nhẹ', 'NEG')]","[('nghe nhạc nhẹ', 'ko thích hợp')]","[('nghe nhạc nhẹ', 'ko thích hợp', 'NEG')]"
+2 cái 2 xương rồng mình đặt k có chữ,['2 cái 2 xương rồng'],"[('2 cái 2 xương rồng', 'NEG')]","[('2 cái 2 xương rồng', 'k có chữ')]","[('2 cái 2 xương rồng', 'k có chữ', 'NEG')]"
+màn hình màu k được tươi tắn,['màn hình màu'],"[('màn hình màu', 'NEG')]","[('màn hình màu', 'k được tươi tắn')]","[('màn hình màu', 'k được tươi tắn', 'NEG')]"
+ghi 2m giao 1m,['giao'],"[('giao', 'NEG')]","[('giao', 'ghi 2m giao 1m')]","[('giao', 'ghi 2m giao 1m', 'NEG')]"
+giá khá cao,['giá'],"[('giá', 'NEG')]","[('giá', 'khá cao')]","[('giá', 'khá cao', 'NEG')]"

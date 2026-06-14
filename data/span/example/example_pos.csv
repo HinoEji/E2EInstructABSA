@@ -1,0 +1,13 @@
+text,aspects,aspect_sentiment_pairs,aspect_opinion_pairs,triplets
+"Mua đợt sale giá ngon,",['giá'],"[('giá', 'POS')]","[('giá', 'ngon,')]","[('giá', 'ngon,', 'POS')]"
+dùng ok,['dùng'],"[('dùng', 'POS')]","[('dùng', 'ok')]","[('dùng', 'ok', 'POS')]"
+đóng mở dễ dàng,['đóng mở'],"[('đóng mở', 'POS')]","[('đóng mở', 'dễ dàng')]","[('đóng mở', 'dễ dàng', 'POS')]"
+"Giấy cứng ,chất lượng.",['Giấy'],"[('Giấy', 'POS')]","[('Giấy', 'cứng ,chất lượng.')]","[('Giấy', 'cứng ,chất lượng.', 'POS')]"
+chất lượng ok.,['chất lượng'],"[('chất lượng', 'POS')]","[('chất lượng', 'ok.')]","[('chất lượng', 'ok.', 'POS')]"
+đóng gói cẩn thận.,['đóng gói'],"[('đóng gói', 'POS')]","[('đóng gói', 'cẩn thận.')]","[('đóng gói', 'cẩn thận.', 'POS')]"
+Đó giờ chỉ tin dùng hạt chia của shop realfood. Hài lòng và luôn mua lại của shop này.,"['shop realfood.', 'shop này.']","[('shop realfood.', 'POS'), ('shop này.', 'POS')]","[('shop realfood.', 'tin dùng hạt chia của shop realfood. Hài lòng và luôn mua lại'), ('shop này.', 'tin dùng hạt chia của shop realfood. Hài lòng và luôn mua lại')]","[('shop realfood.', 'tin dùng hạt chia của shop realfood. Hài lòng và luôn mua lại', 'POS'), ('shop này.', 'tin dùng hạt chia của shop realfood. Hài lòng và luôn mua lại', 'POS')]"
+rất chắc chắn.,['<IA>'],"[('<IA>', 'POS')]","[('<IA>', 'rất chắc chắn.')]","[('<IA>', 'rất chắc chắn.', 'POS')]"
+dễ lắp ráp,['lắp ráp'],"[('lắp ráp', 'POS')]","[('lắp ráp', 'dễ')]","[('lắp ráp', 'dễ', 'POS')]"
+Tốt,['<IA>'],"[('<IA>', 'POS')]","[('<IA>', 'Tốt')]","[('<IA>', 'Tốt', 'POS')]"
+nước sơn rất lì.,['nước sơn'],"[('nước sơn', 'POS')]","[('nước sơn', 'rất lì.')]","[('nước sơn', 'rất lì.', 'POS')]"
+SP tốt rất ưng ý,['SP'],"[('SP', 'POS')]","[('SP', 'tốt rất ưng ý')]","[('SP', 'tốt rất ưng ý', 'POS')]"

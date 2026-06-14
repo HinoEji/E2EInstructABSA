@@ -6,17 +6,17 @@
     },
     
     "data":{
-        "data_dir" : "data/v4",
-        "handler_type" : "InstructionSegmentHandler",
-        "instruction_type" : "type_3",
+        "data_dir" : "data/span",
+        "handler_type" : "InstructionSpanHandler",
+        "instruction_type" : "type_2",
         "allow_punctuation" : true
     },
 
     "training":{
         "output_dir" : "./output",
-        "learning_rate" : 2e-5,
-        "per_device_train_batch_size" : 64,
-        "per_device_eval_batch_size":128,
+        "learning_rate" : 1e-5,
+        "per_device_train_batch_size" : 16,
+        "per_device_eval_batch_size":16,
         "weight_decay":0.01,                 
         "save_total_limit":1,                
         "num_train_epochs":100,                
