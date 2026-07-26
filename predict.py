@@ -5,6 +5,7 @@ from typing import Any
 
 
 DEFAULT_CONFIG = {
+    "pretrained_model": None,
     "max_length": 512,
     "handler_type": "InstructionSpanHandler",
     "instruction_type": "type_2",
@@ -15,6 +16,8 @@ DEFAULT_CONFIG = {
     "generation_num_beams": 2,
     "fp16": False,
 }
+
+TRAINING_ADDED_TOKENS = ["<IA>", "<IO>", "##", "$"]
 
 REQUIRED_DATASET_COLUMNS = {
     "text",
@@ -55,6 +58,9 @@ def build_runtime_config(config_path: Path | None) -> dict[str, Any]:
     runtime_config.update(
         {
             "max_length": model_config.get("max_length", runtime_config["max_length"]),
+            "pretrained_model": model_config.get(
+                "pretrained", runtime_config["pretrained_model"]
+            ),
             "handler_type": data_config.get(
                 "handler_type", runtime_config["handler_type"]
             ),
@@ -82,6 +88,50 @@ def build_runtime_config(config_path: Path | None) -> dict[str, Any]:
         runtime_config["metric_types"] = [runtime_config["metric_types"]]
 
     return runtime_config
+
+
+def load_prediction_tokenizer(model_path: Path, runtime_config: dict[str, Any]):
+    """Tải tokenizer đã huấn luyện, hoặc dựng lại từ base model nếu checkpoint thiếu tokenizer."""
+    from transformers import AutoTokenizer
+
+    try:
+        return AutoTokenizer.from_pretrained(model_path, use_fast=True)
+    except OSError:
+        pretrained_model = runtime_config.get("pretrained_model")
+        if not pretrained_model:
+            raise
+
+        print(
+            "Tokenizer files not found in model path; "
+            f"loading base tokenizer from {pretrained_model}."
+        )
+        return AutoTokenizer.from_pretrained(pretrained_model, use_fast=True)
+
+
+def ensure_training_tokens(tokenizer, model) -> None:
+    """Bảo đảm tokenizer khi suy luận có cùng token đặc biệt đã thêm lúc train."""
+    vocab = tokenizer.get_vocab()
+    missing_tokens = [token for token in TRAINING_ADDED_TOKENS if token not in vocab]
+    if missing_tokens:
+        tokenizer.add_tokens(missing_tokens)
+
+    input_embedding_size = model.get_input_embeddings().weight.shape[0]
+    if len(tokenizer) > input_embedding_size:
+        model.resize_token_embeddings(len(tokenizer))
+        input_embedding_size = model.get_input_embeddings().weight.shape[0]
+
+    token_ids = {
+        token: tokenizer.convert_tokens_to_ids(token)
+        for token in TRAINING_ADDED_TOKENS
+    }
+    print(f"Training token ids: {token_ids}")
+
+    if len(tokenizer) != input_embedding_size:
+        print(
+            "Warning: tokenizer size and model embedding size differ "
+            f"({len(tokenizer)} vs {input_embedding_size}). "
+            "Use a model path saved by train.py best_models so token ids stay aligned."
+        )
 
 
 def parse_args() -> argparse.Namespace:
@@ -153,7 +203,6 @@ def run_prediction(
     import torch
     from transformers import (
         AutoModelForSeq2SeqLM,
-        AutoTokenizer,
         DataCollatorForSeq2Seq,
         Seq2SeqTrainer,
         Seq2SeqTrainingArguments,
@@ -180,8 +229,9 @@ def run_prediction(
         runtime_config["allow_punctuation"],
     )
 
-    tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=True)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
+    tokenizer = load_prediction_tokenizer(model_path, runtime_config)
+    ensure_training_tokens(tokenizer, model)
 
     def preprocess_function(examples):
         """Mã hóa cả instruction đầu vào và nhãn chuẩn."""
